@@ -1,7 +1,7 @@
-package com.example.cc.demo.service;
+package com.example.cc.demo.openAi.service;
 
 import com.alibaba.fastjson2.JSONObject;
-import com.example.cc.demo.entity.OpenAiChatCompletionsParam;
+import com.example.cc.demo.openAi.entity.OpenAiChatCompletionsParam;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
