@@ -23,6 +23,8 @@ public class ResponseControllerAdvice implements ResponseBodyAdvice<Object> {
         if (returnType.getGenericParameterType().equals(String.class)) {
             ObjectMapper objectMapper = new ObjectMapper();
             try {
+                // 为了保证返回的是 json 格式，这里需要设置 contentType
+                response.getHeaders().setContentType(MediaType.APPLICATION_JSON);
                 return objectMapper.writeValueAsString(new ResultVO<>(body));
             } catch (Exception e) {
                 throw new ApiException("返回 String 类型出错");
