@@ -25,6 +25,7 @@ public class ResponseControllerAdvice implements ResponseBodyAdvice<Object> {
             try {
                 // 为了保证返回的是 json 格式，这里需要设置 contentType
                 response.getHeaders().setContentType(MediaType.APPLICATION_JSON);
+                // 这里直接将原本要返回的对象转换成 json 字符串返回
                 return objectMapper.writeValueAsString(new ResultVO<>(body));
             } catch (Exception e) {
                 throw new ApiException("返回 String 类型出错");

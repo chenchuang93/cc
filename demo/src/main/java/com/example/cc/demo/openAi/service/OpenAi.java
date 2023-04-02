@@ -17,6 +17,7 @@ public class OpenAi {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
+
     public String generateImages(OpenAiChatCompletionsParam openAiChatCompletionsParam) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
