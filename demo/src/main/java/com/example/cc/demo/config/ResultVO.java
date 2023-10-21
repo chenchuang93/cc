@@ -1,8 +1,8 @@
 package com.example.cc.demo.config;
 
-import lombok.Getter;
+import lombok.Data;
 
-@Getter
+@Data
 public class ResultVO<T> {
 
     /**
