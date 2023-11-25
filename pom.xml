@@ -20,6 +20,8 @@
 
     <modules>
         <module>demo</module>
+        <module>demo2</module>
+        <!--        <module>dataway-sample</module>-->
     </modules>
 
     <dependencies>

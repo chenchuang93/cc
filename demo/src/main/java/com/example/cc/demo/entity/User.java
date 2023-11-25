@@ -1,16 +1,16 @@
 package com.example.cc.demo.entity;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
-
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Data
 public class User {
     @NotNull(message = "id不能为空")
     private Long id;
 
+    @NotNull
     @NotNull(message = "用户账号不能为空")
     @Size(min = 6, max = 20, message = "用户账号长度必须在6-20之间")
     private String account;
